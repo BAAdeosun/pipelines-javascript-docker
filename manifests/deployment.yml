@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: baadeosunpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: baadeosunpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: baadeosunpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: baadeosunpipelinesjavascriptdocker 
+          image: myappadeoscr.azurecr.io/baadeosunpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
