@@ -13,10 +13,10 @@ variables:
   # Container registry service connection established during pipeline creation
   dockerRegistryServiceConnection: '9effdbdc-84ea-4117-a8c7-26cc93c85db0'
   imageRepository: 'baadeosunpipelinesjavascriptdocker'
-  containerRegistry: 'myappadeoscr.azurecr.io'
+  containerRegistry: 'adeoscr.azurecr.io'
   dockerfilePath: '**/Dockerfile'
   tag: '$(Build.BuildId)'
-  imagePullSecret: 'myappadeoscr26ab-auth'
+  imagePullSecret: 'adeoscr26ab-auth'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
