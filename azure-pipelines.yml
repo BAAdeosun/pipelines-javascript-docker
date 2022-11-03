@@ -11,7 +11,7 @@ resources:
 variables:
 
   # Container registry service connection established during pipeline creation
-  dockerRegistryServiceConnection: 'BAAdeosunpipelinesjavascriptdocker-myapp-default-1667478021760'
+  dockerRegistryServiceConnection: 'd820619f-0e05-457e-963c-6432084d413c'
   imageRepository: 'baadeosunpipelinesjavascriptdocker'
   containerRegistry: 'adeoscr.azurecr.io'
   dockerfilePath: '**/Dockerfile'
