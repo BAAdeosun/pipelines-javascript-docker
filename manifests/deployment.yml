@@ -1,0 +1,24 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: baadeosunpipelinesjavascriptdocker 
+spec:
+  replicas: 2
+  strategy: 
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+  selector:
+    matchLabels:
+      app: baadeosunpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: baadeosunpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: baadeosunpipelinesjavascriptdocker 
+          image: myappadeoscr.azurecr.io/baadeosunpipelinesjavascriptdocker:1.0
+          ports:
+          - containerPort: 8080
