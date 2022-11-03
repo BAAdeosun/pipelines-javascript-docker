@@ -3,7 +3,12 @@ kind: Deployment
 metadata:
   name: baadeosunpipelinesjavascriptdocker 
 spec:
-  replicas: 1
+  replicas: 3
+  strategy: 
+    Type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
   selector:
     matchLabels:
       app: baadeosunpipelinesjavascriptdocker
@@ -14,6 +19,6 @@ spec:
     spec:
       containers:
         - name: baadeosunpipelinesjavascriptdocker 
-          image: myappadeoscr.azurecr.io/baadeosunpipelinesjavascriptdocker
+          image: myappadeoscr.azurecr.io/baadeosunpipelinesjavascriptdocker:1.0
           ports:
           - containerPort: 8080
